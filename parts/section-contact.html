@@ -1,0 +1,89 @@
+<!-- wp:group {"className":"contact-section section","tagName":"section","metadata":{"name":"Contact Section"},"layout":{"type":"constrained"}} -->
+<section class="wp-block-group contact-section section" id="contact">
+
+    <!-- wp:group {"className":"container","layout":{"type":"default"}} -->
+    <div class="wp-block-group container">
+
+        <!-- wp:columns {"className":"contact-inner reveal","isStackedOnMobile":true} -->
+        <div class="wp-block-columns contact-inner reveal">
+
+            <!-- wp:column {"className":"contact-text"} -->
+            <div class="wp-block-column contact-text">
+
+                <!-- wp:paragraph {"className":"section-label"} -->
+                <p class="wp-block-paragraph section-label">Get In Touch</p>
+                <!-- /wp:paragraph -->
+
+                <!-- wp:heading {"level":2,"className":"section-title"} -->
+                <h2 class="wp-block-heading section-title">Let's <span class="gradient-text">Work Together</span></h2>
+                <!-- /wp:heading -->
+
+                <!-- wp:paragraph {"className":"contact-tagline"} -->
+                <p class="wp-block-paragraph contact-tagline">Have a project in mind? I'd love to hear about it. Send me a message and let's build something great.</p>
+                <!-- /wp:paragraph -->
+
+                <!-- wp:html -->
+                <div class="contact-info">
+                    <a href="mailto:you@email.com" class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <span>you@email.com</span>
+                    </a>
+                    <a href="tel:+910000000000" class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span>+91 00000 00000</span>
+                    </a>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span>Your City, India</span>
+                    </div>
+                </div>
+                <div class="contact-social">
+                    <a href="#" class="social-btn" target="_blank" rel="noopener">GitHub</a>
+                    <a href="#" class="social-btn" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="#" class="social-btn" target="_blank" rel="noopener">Twitter</a>
+                </div>
+                <!-- /wp:html -->
+
+            </div>
+            <!-- /wp:column -->
+
+            <!-- wp:column {"className":"contact-form-col"} -->
+            <div class="wp-block-column contact-form-col">
+                <!-- wp:html -->
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="cf-name">Your Name</label>
+                        <input type="text" id="cf-name" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-email">Email Address</label>
+                        <input type="email" id="cf-email" name="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-subject">Subject</label>
+                        <input type="text" id="cf-subject" name="subject" placeholder="Project Inquiry">
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-message">Message</label>
+                        <textarea id="cf-message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">
+                        Send Message
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+                    </button>
+                    <div class="form-success" id="form-success" style="display:none;">
+                        ✅ Message sent! I'll get back to you soon.
+                    </div>
+                </form>
+                <!-- /wp:html -->
+            </div>
+            <!-- /wp:column -->
+
+        </div>
+        <!-- /wp:columns -->
+
+    </div>
+    <!-- /wp:group -->
+
+</section>
+<!-- /wp:group -->
