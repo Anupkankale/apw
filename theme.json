@@ -1,0 +1,51 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 2,
+    "settings": {
+        "color": {
+            "palette": [
+                { "name": "Dark BG",  "slug": "dark-bg",  "color": "#0d0d0d" },
+                { "name": "Card BG",  "slug": "card-bg",  "color": "#161616" },
+                { "name": "White",    "slug": "white",    "color": "#ffffff" },
+                { "name": "Muted",    "slug": "muted",    "color": "#888888" },
+                { "name": "Purple",   "slug": "purple",   "color": "#7c3aed" },
+                { "name": "Blue",     "slug": "blue",     "color": "#2563eb" },
+                { "name": "Pink",     "slug": "pink",     "color": "#ec4899" },
+                { "name": "Cyan",     "slug": "cyan",     "color": "#06b6d4" },
+                { "name": "Green",    "slug": "green",    "color": "#10b981" }
+            ]
+        },
+        "typography": {
+            "fontFamilies": [
+                {
+                    "fontFamily": "'Inter', system-ui, sans-serif",
+                    "name": "Inter",
+                    "slug": "inter"
+                },
+                {
+                    "fontFamily": "'Plus Jakarta Sans', system-ui, sans-serif",
+                    "name": "Plus Jakarta Sans",
+                    "slug": "plus-jakarta-sans"
+                }
+            ]
+        },
+        "spacing": {
+            "units": ["px", "em", "rem", "%", "vw", "vh"]
+        },
+        "layout": {
+            "contentSize": "800px",
+            "wideSize": "1200px"
+        }
+    },
+    "styles": {
+        "color": {
+            "background": "#0d0d0d",
+            "text": "#ffffff"
+        },
+        "typography": {
+            "fontFamily": "'Inter', system-ui, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "1.6"
+        }
+    }
+}
