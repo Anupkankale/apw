@@ -135,12 +135,25 @@ window.addEventListener('scroll', () => {
     });
 }, { passive: true });
 
-/* ========== MOUSE GLOW ON CARDS ========== */
+/* ========== MOUSE GLOW ON CARDS + GLASS SHEEN ========== */
 document.querySelectorAll('.project-card, .skills-category, .timeline-content, .contact-form').forEach(card => {
     card.addEventListener('mousemove', e => {
         const r = card.getBoundingClientRect();
-        card.style.setProperty('--mx', ((e.clientX - r.left) / r.width  * 100).toFixed(1) + '%');
-        card.style.setProperty('--my', ((e.clientY - r.top)  / r.height * 100).toFixed(1) + '%');
+        const px = ((e.clientX - r.left) / r.width  * 100).toFixed(1) + '%';
+        const py = ((e.clientY - r.top)  / r.height * 100).toFixed(1) + '%';
+        card.style.setProperty('--mx', px);
+        card.style.setProperty('--my', py);
+        card.style.setProperty('--gx', px);
+        card.style.setProperty('--gy', py);
+    });
+});
+
+/* Glass sheen tracker for .liquid-glass elements */
+document.querySelectorAll('.liquid-glass').forEach(el => {
+    el.addEventListener('mousemove', e => {
+        const r = el.getBoundingClientRect();
+        el.style.setProperty('--gx', ((e.clientX - r.left) / r.width  * 100).toFixed(1) + '%');
+        el.style.setProperty('--gy', ((e.clientY - r.top)  / r.height * 100).toFixed(1) + '%');
     });
 });
 
@@ -180,6 +193,26 @@ window.addEventListener('mousemove', e => {
         o.style.transform = `translate(${x * d}px, ${y * d}px) scale(1)`;
     });
 }, { passive: true });
+
+/* ========== THEME TOGGLE ========== */
+(function () {
+    const html   = document.documentElement;
+    const toggle = document.getElementById('theme-toggle');
+    const saved  = localStorage.getItem('theme');
+
+    /* Apply saved preference, or fall back to system default */
+    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        html.classList.add('dark');
+    }
+
+    toggle?.addEventListener('click', () => {
+        html.classList.add('theme-transition');
+        html.classList.toggle('dark');
+        localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        /* Remove transition class once animation completes */
+        setTimeout(() => html.classList.remove('theme-transition'), 380);
+    });
+})();
 
 /* ========== PAGE LOAD FADE ========== */
 document.documentElement.style.opacity = '0';
