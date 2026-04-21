@@ -43,9 +43,10 @@ document.querySelectorAll('.mobile-menu a').forEach(a => {
 const roles = [
     'Full Stack Developer',
     'WordPress Expert',
-    'UI/UX Enthusiast',
-    'Problem Solver',
-    'Open Source Contributor'
+    'PHP Developer',
+    'Vue.js & Nuxt.js Dev',
+    'WP Core Contributor',
+    'Open Source Author'
 ];
 let roleIdx = 0, charIdx = 0, deleting = false;
 const typeEl = document.getElementById('typewriter');
