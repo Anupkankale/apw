@@ -4,8 +4,6 @@ Each section of the portfolio is a self-contained component in `parts/`.
 
 ---
 
-
-
 ## header.html
 **File:** `parts/header.html`
 **Renders:** Fixed navigation bar
